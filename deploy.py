@@ -34,8 +34,6 @@ open('TFIDF_Vect.pkl', "wb").write(response.content)
 model = pickle.load(open('GBC.sav','rb'))
 TFIDF_Vect = pickle.load(open('TFIDF_Vect.pkl','rb'))
 
-os.remove('GBC.sav')
-os.remove('TFIDF_Vect.pkl')
 
 sw_lst = stopwords.words('english') + list(string.punctuation) + ['--', 'xxxx',"''", '""', '...', '``']
 def process_txt(txt):
